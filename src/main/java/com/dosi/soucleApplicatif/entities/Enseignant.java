@@ -77,6 +77,17 @@ public class Enseignant
 	}
 
 
+	
+	/**
+	 * 
+	 */
+	public Enseignant() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+
 	/**
 	 * @return the noEnseignant
 	 */

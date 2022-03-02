@@ -29,7 +29,7 @@ public class EnseignantController
 	EnseignantService enseignantservice;
 	
 
-	private static Logger logger = LogManager.getLogger(EnseignantController.class);
+	private static Logger logger =LogManager.getLogger(EnseignantController.class);
 	
 	/**
 	 * 

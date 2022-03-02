@@ -1,6 +1,7 @@
 package com.dosi.soucleApplicatif.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -46,7 +47,9 @@ public class EnseignantServiceImp implements EnseignantService{
 	@Override
 	public Enseignant chercherParNoEnseignant(Integer id) {
 		
-		return enseignantRepository.getById(id);
+		Optional<Enseignant> res = enseignantRepository.findById(id);
+		
+		return res.isPresent() ? res.get() : null;
 	}
 
 	/**
