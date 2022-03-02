@@ -31,3 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
+data/soucleDB.mv.db
+data/soucleDB.trace.db
