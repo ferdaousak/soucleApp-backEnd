@@ -21,7 +21,7 @@ import com.dosi.soucleApplicatif.services.EnseignantServiceImp;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("/enseignant")
+@RequestMapping("/enseignants")
 public class EnseignantController 
 {
 
@@ -35,7 +35,7 @@ public class EnseignantController
 	 * 
 	 * @return tout les enseignant
 	 */
-	@GetMapping("/all")
+	@GetMapping
 	public List<Enseignant> AfficherTout()
 	{
 		try 
@@ -55,7 +55,7 @@ public class EnseignantController
 	 * @param enseignant
 	 * @return l'enseignant ajouter
 	 */
-	@PostMapping("/add")
+	@PostMapping
 	public Enseignant addEnseignant(@RequestBody Enseignant enseignant)
 	{
 		
@@ -77,7 +77,7 @@ public class EnseignantController
 	 * @param id
 	 * @return true si supprimer
 	 */
-	@DeleteMapping("/delete/{numero}")
+	@DeleteMapping("/{numero}")
 	public boolean deleteEnseignant(@PathVariable int numero)
 	{
 		try {
@@ -97,7 +97,7 @@ public class EnseignantController
 	 * @param numero
 	 * @return l'enseignant trouvé
 	 */
-	@GetMapping("/getByNumero/{numero}")
+	@GetMapping("/{numero}")
 	public Enseignant getEnseignantByNumero(@PathVariable int numero)
 	{
 		try {
@@ -117,7 +117,7 @@ public class EnseignantController
 	 * @param nom
 	 * @return l'enseignant trouvé
 	 */
-	@GetMapping("/getByNom/{nom}")
+	@GetMapping("/nom/{nom}")
 	public Enseignant getEnseignantByNumero(@PathVariable String nom)
 	{
 		try {
@@ -138,7 +138,7 @@ public class EnseignantController
 	 * @param emailUbo
 	 * @return l'enseignant trouvé
 	 */
-	@GetMapping("/getByEmailUbo/{emailUbo}")
+	@GetMapping("/emailUbo/{emailUbo}")
 	public Enseignant getEnseignantByEmailUbo(@PathVariable String emailUbo)
 	{
 		try {
